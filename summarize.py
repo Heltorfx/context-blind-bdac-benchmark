@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Turn raw benchmark output into reviewer-readable Markdown and CSV files."""
+"""Turn raw benchmark output into Markdown and CSV summaries."""
 
 from __future__ import annotations
 
@@ -133,4 +133,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

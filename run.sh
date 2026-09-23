@@ -18,7 +18,7 @@ Usage: ./run.sh [smoke|paper] [options]
 
 Modes:
   smoke                 One measured trial; validates the artifact quickly.
-  paper                 Thirty measured trials; reproduces paper-facing values.
+  paper                 Thirty measured trials; reproduces the reported values.
 
 Options:
   --aurora-version V    normal (default) or v2.

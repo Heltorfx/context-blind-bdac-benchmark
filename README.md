@@ -7,7 +7,7 @@ It does not duplicate the implementation: by default it uses the adjacent
 
 ## What the artifact measures
 
-The paper-facing run records:
+The benchmark records:
 
 - CAPSS key generation, signing, and verification;
 - complete credential issuance and communication;
@@ -44,7 +44,7 @@ Quick validation:
 ./run.sh smoke
 ```
 
-Paper-facing benchmark:
+Full benchmark:
 
 ```bash
 ./run.sh paper --threads 8
@@ -58,9 +58,9 @@ On Windows, the PowerShell launcher delegates to WSL:
 ```
 
 Use `--skip-build` after the native components have already been built. Use
-`--skip-tests` only for local timing iterations, not for an artifact-evaluation
-run. `./run.sh --help` lists all options, including an alternate implementation
-path and the experimental Aurora `v2` backend.
+`--skip-tests` only for local timing iterations. `./run.sh --help` lists all
+options, including an alternate implementation path and the experimental
+Aurora `v2` backend.
 
 ## Results
 
@@ -69,7 +69,7 @@ Each execution creates a timestamped directory under `results/` containing:
 - `benchmark.json`: complete machine-readable results and raw samples;
 - `environment.json`: CPU, platform, tool versions, thread settings, and Git
   revisions when available;
-- `REPORT.md`: compact reviewer-readable result table;
+- `REPORT.md`: compact result table;
 - `summary.csv`: aggregate values;
 - `presentation-samples.csv`: every measured presentation;
 - `logs/`: build, test, and benchmark logs; and
