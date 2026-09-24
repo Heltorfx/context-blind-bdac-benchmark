@@ -1,0 +1,9 @@
+/target/
+__pycache__/
+*.py[cod]
+/*.so
+/*.pyd
+/*.dll
+/*.dylib
+/dist/
+/*.egg-info/

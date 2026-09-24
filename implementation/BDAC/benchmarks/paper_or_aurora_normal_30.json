@@ -1,0 +1,1311 @@
+{
+  "capss_microbench": {
+    "iterations": 30,
+    "keygen_avg_seconds": 0.0024454773666396554,
+    "label": "G256-5.fast.extended",
+    "sign_avg_seconds": 0.24206236613332902,
+    "verify_avg_seconds": 0.09600214613334022
+  },
+  "full_flow": {
+    "issuance_checks": {
+      "credential_signature_ok": true,
+      "disclosure_ok": true,
+      "issuance_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "issuance_message_sizes": {
+      "issuer_to_user_credential": 16160,
+      "issuer_to_user_request": 64,
+      "total": 19936,
+      "user_to_issuer": 3712
+    },
+    "issuance_summary": {
+      "Issuance total": {
+        "mean_seconds": 0.39213513376667114,
+        "stddev_seconds": 0.022536669615874343
+      },
+      "Issuer selects issuance attributes": {
+        "mean_seconds": 2.3796333332863168e-06,
+        "stddev_seconds": 8.938715585592343e-07
+      },
+      "Issuer signs credential": {
+        "mean_seconds": 0.225648215766671,
+        "stddev_seconds": 0.018901022685313133
+      },
+      "Issuer verifies Merkle openings": {
+        "mean_seconds": 0.06921661576666623,
+        "stddev_seconds": 0.004267410769183335
+      },
+      "Issuer verifies credential": {
+        "mean_seconds": 0.08650750299999951,
+        "stddev_seconds": 0.009560897766257372
+      },
+      "User builds Merkle root || dpk": {
+        "mean_seconds": 0.010667910300001419,
+        "stddev_seconds": 0.0013364175258309076
+      },
+      "User opens issuance attrs": {
+        "mean_seconds": 9.250929999969534e-05,
+        "stddev_seconds": 3.305287750977595e-05
+      }
+    },
+    "show_d4": {
+      "aurora_total_seconds": 30.23293933483333,
+      "aurora_total_stddev_seconds": 1.2914338783798305,
+      "constraints": 188487,
+      "disclosed_count": 4,
+      "export_seconds": 3.0960942588666627,
+      "export_stddev_seconds": 0.45560821935104967,
+      "iterations": 30,
+      "ots_keygen_seconds": 0.0,
+      "ots_keygen_stddev_seconds": 0.0,
+      "ots_sign_seconds": 0.0,
+      "ots_sign_stddev_seconds": 0.0,
+      "ots_verify_seconds": 0.0,
+      "ots_verify_stddev_seconds": 0.0,
+      "primary_inputs": 13,
+      "proof_size_bytes": 300204.73333333334,
+      "proof_size_max_bytes": 303081,
+      "proof_size_min_bytes": 295681,
+      "prove_seconds": 22.225194212300007,
+      "prove_stddev_seconds": 1.061013761132804,
+      "samples": [
+        {
+          "export_seconds": 2.8301859929999864,
+          "export_timings": {
+            "build_r1cs": 0.000497093999996423,
+            "export_static_r1cs": 0.007758421000005455,
+            "export_variables": 0.6352889129999824,
+            "resolve_witness": 2.186558101000003
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301753,
+          "prove_seconds": 19.693266413000003,
+          "total_sent_bytes": 318121,
+          "user_online_seconds": 22.793134243999987,
+          "valid": true,
+          "verify_seconds": 4.769283882999986,
+          "witness_seconds": 0.2696818379999968
+        },
+        {
+          "export_seconds": 2.808189760999994,
+          "export_timings": {
+            "build_r1cs": 0.0006541639999966264,
+            "export_static_r1cs": 0.010923821999995198,
+            "export_variables": 0.6825769820000005,
+            "resolve_witness": 2.1139542319999975
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300097,
+          "prove_seconds": 20.734647758000023,
+          "total_sent_bytes": 316465,
+          "user_online_seconds": 23.762351310000014,
+          "valid": true,
+          "verify_seconds": 4.389137576999985,
+          "witness_seconds": 0.21951379099999713
+        },
+        {
+          "export_seconds": 3.0007170480000127,
+          "export_timings": {
+            "build_r1cs": 0.000598773000035635,
+            "export_static_r1cs": 0.006046174999994491,
+            "export_variables": 0.6222801000000118,
+            "resolve_witness": 2.3717136220000157
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302609,
+          "prove_seconds": 22.169130628999994,
+          "total_sent_bytes": 318977,
+          "user_online_seconds": 25.414354678999985,
+          "valid": true,
+          "verify_seconds": 4.400824419000003,
+          "witness_seconds": 0.24450700199997755
+        },
+        {
+          "export_seconds": 3.112780337999993,
+          "export_timings": {
+            "build_r1cs": 0.0011578859999872293,
+            "export_static_r1cs": 0.00816227899997557,
+            "export_variables": 0.6356960200000117,
+            "resolve_witness": 2.467675390000011
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299873,
+          "prove_seconds": 21.858528695000018,
+          "total_sent_bytes": 316241,
+          "user_online_seconds": 25.225505819000034,
+          "valid": true,
+          "verify_seconds": 5.111598804000039,
+          "witness_seconds": 0.2541967860000227
+        },
+        {
+          "export_seconds": 3.1552794710000285,
+          "export_timings": {
+            "build_r1cs": 0.0005209710000144696,
+            "export_static_r1cs": 0.01054323599998952,
+            "export_variables": 0.6463748229999737,
+            "resolve_witness": 2.4977632049999556
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301993,
+          "prove_seconds": 24.076413151999986,
+          "total_sent_bytes": 318361,
+          "user_online_seconds": 27.48379826300004,
+          "valid": true,
+          "verify_seconds": 4.942327816000045,
+          "witness_seconds": 0.2521056400000248
+        },
+        {
+          "export_seconds": 4.115204969999979,
+          "export_timings": {
+            "build_r1cs": 0.00046997200001897,
+            "export_static_r1cs": 0.01121950399999605,
+            "export_variables": 0.6268549989999883,
+            "resolve_witness": 3.4765877570000043
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298169,
+          "prove_seconds": 22.42285167099999,
+          "total_sent_bytes": 314537,
+          "user_online_seconds": 26.782393356999933,
+          "valid": true,
+          "verify_seconds": 4.742969721000009,
+          "witness_seconds": 0.24433671599996387
+        },
+        {
+          "export_seconds": 3.1448952150000196,
+          "export_timings": {
+            "build_r1cs": 0.0017034439999861206,
+            "export_static_r1cs": 0.007937698000034743,
+            "export_variables": 0.6558475899999507,
+            "resolve_witness": 2.4792760800000337
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299513,
+          "prove_seconds": 20.96391374199999,
+          "total_sent_bytes": 315881,
+          "user_online_seconds": 24.378389225999967,
+          "valid": true,
+          "verify_seconds": 4.9831694380000044,
+          "witness_seconds": 0.26958026899995957
+        },
+        {
+          "export_seconds": 2.922808347,
+          "export_timings": {
+            "build_r1cs": 0.0005061360000127024,
+            "export_static_r1cs": 0.008831982999993215,
+            "export_variables": 0.6097635720000198,
+            "resolve_witness": 2.3036320229999774
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300705,
+          "prove_seconds": 22.02354549300003,
+          "total_sent_bytes": 317073,
+          "user_online_seconds": 25.20149015700008,
+          "valid": true,
+          "verify_seconds": 5.255959366000013,
+          "witness_seconds": 0.25513631700005135
+        },
+        {
+          "export_seconds": 2.776519453999981,
+          "export_timings": {
+            "build_r1cs": 0.0007549079999762398,
+            "export_static_r1cs": 0.009187445999998545,
+            "export_variables": 0.6045901809999918,
+            "resolve_witness": 2.1619102180000027
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301753,
+          "prove_seconds": 22.545202399999994,
+          "total_sent_bytes": 318121,
+          "user_online_seconds": 25.58672403999998,
+          "valid": true,
+          "verify_seconds": 5.015723749000017,
+          "witness_seconds": 0.2650021860000038
+        },
+        {
+          "export_seconds": 2.8749381279999966,
+          "export_timings": {
+            "build_r1cs": 0.0011326289999828987,
+            "export_static_r1cs": 0.008462891000021955,
+            "export_variables": 0.5934109450000165,
+            "resolve_witness": 2.2718461270000034
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299441,
+          "prove_seconds": 21.898774661000004,
+          "total_sent_bytes": 315809,
+          "user_online_seconds": 25.039091018000022,
+          "valid": true,
+          "verify_seconds": 4.9880828640000345,
+          "witness_seconds": 0.26537822900002084
+        },
+        {
+          "export_seconds": 2.9963775510000232,
+          "export_timings": {
+            "build_r1cs": 0.0011774399999922025,
+            "export_static_r1cs": 0.008176390000016909,
+            "export_variables": 0.6177526259999695,
+            "resolve_witness": 2.3691927620000115
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299889,
+          "prove_seconds": 23.262029095999992,
+          "total_sent_bytes": 316257,
+          "user_online_seconds": 26.518316655000035,
+          "valid": true,
+          "verify_seconds": 5.13712801500003,
+          "witness_seconds": 0.25991000800001984
+        },
+        {
+          "export_seconds": 2.884499943999913,
+          "export_timings": {
+            "build_r1cs": 0.0005978770000183431,
+            "export_static_r1cs": 0.010740273000010347,
+            "export_variables": 0.6358141220000562,
+            "resolve_witness": 2.237265751999985
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299361,
+          "prove_seconds": 23.698898558999986,
+          "total_sent_bytes": 315729,
+          "user_online_seconds": 26.86500312699991,
+          "valid": true,
+          "verify_seconds": 5.034232031999977,
+          "witness_seconds": 0.2816046240000105
+        },
+        {
+          "export_seconds": 4.110268122999969,
+          "export_timings": {
+            "build_r1cs": 0.0005527280000023893,
+            "export_static_r1cs": 0.012178329999983362,
+            "export_variables": 0.6105154809999931,
+            "resolve_witness": 3.486928560000024
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298089,
+          "prove_seconds": 21.636792035999974,
+          "total_sent_bytes": 314457,
+          "user_online_seconds": 25.991967272999887,
+          "valid": true,
+          "verify_seconds": 4.942740864000029,
+          "witness_seconds": 0.24490711399994325
+        },
+        {
+          "export_seconds": 2.8379420060000484,
+          "export_timings": {
+            "build_r1cs": 0.0008088019999377138,
+            "export_static_r1cs": 0.010713840999983404,
+            "export_variables": 0.621709194999994,
+            "resolve_witness": 2.2046279859999913
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302721,
+          "prove_seconds": 24.47856401599995,
+          "total_sent_bytes": 319089,
+          "user_online_seconds": 27.611308017000056,
+          "valid": true,
+          "verify_seconds": 5.473355878999996,
+          "witness_seconds": 0.2948019950000571
+        },
+        {
+          "export_seconds": 3.118649739000034,
+          "export_timings": {
+            "build_r1cs": 0.0009409960000539286,
+            "export_static_r1cs": 0.009656001000053038,
+            "export_variables": 0.6812169229999654,
+            "resolve_witness": 2.4267503229999647
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 303081,
+          "prove_seconds": 21.91510645300002,
+          "total_sent_bytes": 319449,
+          "user_online_seconds": 25.3354127880001,
+          "valid": true,
+          "verify_seconds": 4.9544258889999355,
+          "witness_seconds": 0.30165659600004346
+        },
+        {
+          "export_seconds": 2.9875434649999306,
+          "export_timings": {
+            "build_r1cs": 0.00043679800000973046,
+            "export_static_r1cs": 0.008499488999973437,
+            "export_variables": 0.6750031029999946,
+            "resolve_witness": 2.303512203999958
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299177,
+          "prove_seconds": 21.961183044999984,
+          "total_sent_bytes": 315545,
+          "user_online_seconds": 25.20350839699995,
+          "valid": true,
+          "verify_seconds": 4.814985253999907,
+          "witness_seconds": 0.25478188700003557
+        },
+        {
+          "export_seconds": 2.878208483000094,
+          "export_timings": {
+            "build_r1cs": 0.0006263170000693208,
+            "export_static_r1cs": 0.008756093999977566,
+            "export_variables": 0.6319200490000867,
+            "resolve_witness": 2.2368317839999463
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297993,
+          "prove_seconds": 21.261196657000028,
+          "total_sent_bytes": 314361,
+          "user_online_seconds": 24.423794847000067,
+          "valid": true,
+          "verify_seconds": 4.55442202100005,
+          "witness_seconds": 0.2843897069999457
+        },
+        {
+          "export_seconds": 2.8507107650000307,
+          "export_timings": {
+            "build_r1cs": 0.00043823200007864216,
+            "export_static_r1cs": 0.00839353799995024,
+            "export_variables": 0.632956791999959,
+            "resolve_witness": 2.208825858999944
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300609,
+          "prove_seconds": 21.34842702600008,
+          "total_sent_bytes": 316977,
+          "user_online_seconds": 24.430382899000165,
+          "valid": true,
+          "verify_seconds": 4.660562069999969,
+          "witness_seconds": 0.23124510800005282
+        },
+        {
+          "export_seconds": 2.807095123999943,
+          "export_timings": {
+            "build_r1cs": 0.0006185180000102264,
+            "export_static_r1cs": 0.007952282000019295,
+            "export_variables": 0.5980398519999426,
+            "resolve_witness": 2.2004124719999254
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299681,
+          "prove_seconds": 20.815468280000005,
+          "total_sent_bytes": 316049,
+          "user_online_seconds": 23.84727412799998,
+          "valid": true,
+          "verify_seconds": 4.883501272000103,
+          "witness_seconds": 0.22471072400003322
+        },
+        {
+          "export_seconds": 4.363986092000005,
+          "export_timings": {
+            "build_r1cs": 0.0008845739999969737,
+            "export_static_r1cs": 0.00673961900008635,
+            "export_variables": 0.6409091740000576,
+            "resolve_witness": 3.7153798320000533
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297729,
+          "prove_seconds": 22.314325086000053,
+          "total_sent_bytes": 314097,
+          "user_online_seconds": 26.961069486000042,
+          "valid": true,
+          "verify_seconds": 4.707062040999972,
+          "witness_seconds": 0.282758307999984
+        },
+        {
+          "export_seconds": 2.816626198999984,
+          "export_timings": {
+            "build_r1cs": 0.0005671609999353677,
+            "export_static_r1cs": 0.009008664000020872,
+            "export_variables": 0.6030468310000288,
+            "resolve_witness": 2.2039220789999945
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298361,
+          "prove_seconds": 23.663741295000023,
+          "total_sent_bytes": 314729,
+          "user_online_seconds": 26.731807007000043,
+          "valid": true,
+          "verify_seconds": 5.187287245999983,
+          "witness_seconds": 0.25143951300003664
+        },
+        {
+          "export_seconds": 2.849174206999919,
+          "export_timings": {
+            "build_r1cs": 0.0005029310000281839,
+            "export_static_r1cs": 0.0088386539999874,
+            "export_variables": 0.6276601179999943,
+            "resolve_witness": 2.2120868550000523
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298945,
+          "prove_seconds": 23.848031827,
+          "total_sent_bytes": 315313,
+          "user_online_seconds": 26.936853751999934,
+          "valid": true,
+          "verify_seconds": 5.075345168000013,
+          "witness_seconds": 0.23964771800001472
+        },
+        {
+          "export_seconds": 3.098114301999999,
+          "export_timings": {
+            "build_r1cs": 0.0004926160000877644,
+            "export_static_r1cs": 0.009189144000060878,
+            "export_variables": 0.6744571599999745,
+            "resolve_witness": 2.4138792119999835
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302817,
+          "prove_seconds": 23.171138189999965,
+          "total_sent_bytes": 319185,
+          "user_online_seconds": 26.512405260999913,
+          "valid": true,
+          "verify_seconds": 4.843413437000095,
+          "witness_seconds": 0.24315276899994842
+        },
+        {
+          "export_seconds": 2.8634589839999762,
+          "export_timings": {
+            "build_r1cs": 0.0005695150000519789,
+            "export_static_r1cs": 0.0073073119999662595,
+            "export_variables": 0.6105050029999575,
+            "resolve_witness": 2.2450012409999545
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302649,
+          "prove_seconds": 21.285128234000013,
+          "total_sent_bytes": 319017,
+          "user_online_seconds": 24.41092755300008,
+          "valid": true,
+          "verify_seconds": 4.880967983000005,
+          "witness_seconds": 0.2623403350000899
+        },
+        {
+          "export_seconds": 2.9360529309999492,
+          "export_timings": {
+            "build_r1cs": 0.0005674020000014934,
+            "export_static_r1cs": 0.006840466999960881,
+            "export_variables": 0.627081637999936,
+            "resolve_witness": 2.3014891879998913
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302193,
+          "prove_seconds": 21.729393345999938,
+          "total_sent_bytes": 318561,
+          "user_online_seconds": 24.930580768999903,
+          "valid": true,
+          "verify_seconds": 4.355340523999985,
+          "witness_seconds": 0.2651344920000156
+        },
+        {
+          "export_seconds": 2.750054588000012,
+          "export_timings": {
+            "build_r1cs": 0.0004262239999661688,
+            "export_static_r1cs": 0.006675553999912154,
+            "export_variables": 0.5765017100000023,
+            "resolve_witness": 2.166375691999974
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298969,
+          "prove_seconds": 22.045011388000034,
+          "total_sent_bytes": 315337,
+          "user_online_seconds": 25.03652465999994,
+          "valid": true,
+          "verify_seconds": 4.834512883999992,
+          "witness_seconds": 0.24145868399989467
+        },
+        {
+          "export_seconds": 4.288422641000011,
+          "export_timings": {
+            "build_r1cs": 0.000576518999992004,
+            "export_static_r1cs": 0.008206888000017898,
+            "export_variables": 0.740248850999933,
+            "resolve_witness": 3.5393158770000355
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302585,
+          "prove_seconds": 22.469083432999923,
+          "total_sent_bytes": 318953,
+          "user_online_seconds": 26.981386382999972,
+          "valid": true,
+          "verify_seconds": 4.813960276999978,
+          "witness_seconds": 0.22388030900003741
+        },
+        {
+          "export_seconds": 2.8855671320000056,
+          "export_timings": {
+            "build_r1cs": 0.0008037479999529751,
+            "export_static_r1cs": 0.007806713000036325,
+            "export_variables": 0.6122448109999823,
+            "resolve_witness": 2.2646181509999224
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302049,
+          "prove_seconds": 22.226448137000034,
+          "total_sent_bytes": 318417,
+          "user_online_seconds": 25.34219254100003,
+          "valid": true,
+          "verify_seconds": 5.022077287000002,
+          "witness_seconds": 0.23017727199999172
+        },
+        {
+          "export_seconds": 2.8669713399999637,
+          "export_timings": {
+            "build_r1cs": 0.0005390530000113358,
+            "export_static_r1cs": 0.005825555000001259,
+            "export_variables": 0.6216771049998897,
+            "resolve_witness": 2.2388403630000084
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297657,
+          "prove_seconds": 22.486741345000155,
+          "total_sent_bytes": 314025,
+          "user_online_seconds": 25.57790603100011,
+          "valid": true,
+          "verify_seconds": 5.164333228000032,
+          "witness_seconds": 0.22419334599999274
+        },
+        {
+          "export_seconds": 2.9515854250000757,
+          "export_timings": {
+            "build_r1cs": 0.000537445999952979,
+            "export_static_r1cs": 0.0064604690001033305,
+            "export_variables": 0.6495732869998392,
+            "resolve_witness": 2.294923193000159
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 295681,
+          "prove_seconds": 22.752844306000043,
+          "total_sent_bytes": 312049,
+          "user_online_seconds": 25.93841294200024,
+          "valid": true,
+          "verify_seconds": 4.663728040000024,
+          "witness_seconds": 0.23398321100012254
+        }
+      ],
+      "show_instance_seconds": 0.25385374980000963,
+      "show_instance_stddev_seconds": 0.021215964975293336,
+      "static_export_seconds": 3.510283181999995,
+      "total_sent_bytes": 316572.73333333334,
+      "user_online_seconds": 25.57514222096668,
+      "user_online_stddev_seconds": 1.1696146260773639,
+      "valid": true,
+      "variables": 190342,
+      "verify_seconds": 4.88674863493334,
+      "verify_stddev_seconds": 0.2544940447031483
+    },
+    "timings": [
+      {
+        "name": "Setup(lambda,l)",
+        "seconds": 7.452000005514492e-06,
+        "section": "setup"
+      },
+      {
+        "name": "Create entities / CAPSS keygen",
+        "seconds": 1.680871873000001,
+        "section": "setup"
+      },
+      {
+        "name": "Governance attributes",
+        "seconds": 8.750599999984843e-05,
+        "section": "enrollment"
+      },
+      {
+        "name": "Precompute Show R1CS template d=4",
+        "seconds": 10.474364576999989,
+        "section": "setup"
+      }
+    ],
+    "total_seconds": 982.290358929
+  },
+  "metadata": {
+    "attribute_count": 16,
+    "aurora_version": "normal",
+    "backend_revision": "aurora92-full-transcript-absorption",
+    "capss_scheme": "G256-5.fast.extended",
+    "default_disclosure_count": 4,
+    "issuance_iterations": 30,
+    "scheme": "BDAC-CAPSS-Aurora",
+    "security_parameter": 128,
+    "seed": 20260721
+  },
+  "scaling": [
+    {
+      "aurora_total_seconds": 30.23293933483333,
+      "aurora_total_stddev_seconds": 1.2914338783798305,
+      "constraints": 188487,
+      "disclosed_count": 4,
+      "export_seconds": 3.0960942588666627,
+      "export_stddev_seconds": 0.45560821935104967,
+      "iterations": 30,
+      "ots_keygen_seconds": 0.0,
+      "ots_keygen_stddev_seconds": 0.0,
+      "ots_sign_seconds": 0.0,
+      "ots_sign_stddev_seconds": 0.0,
+      "ots_verify_seconds": 0.0,
+      "ots_verify_stddev_seconds": 0.0,
+      "primary_inputs": 13,
+      "proof_size_bytes": 300204.73333333334,
+      "proof_size_max_bytes": 303081,
+      "proof_size_min_bytes": 295681,
+      "prove_seconds": 22.225194212300007,
+      "prove_stddev_seconds": 1.061013761132804,
+      "samples": [
+        {
+          "export_seconds": 2.8301859929999864,
+          "export_timings": {
+            "build_r1cs": 0.000497093999996423,
+            "export_static_r1cs": 0.007758421000005455,
+            "export_variables": 0.6352889129999824,
+            "resolve_witness": 2.186558101000003
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301753,
+          "prove_seconds": 19.693266413000003,
+          "total_sent_bytes": 318121,
+          "user_online_seconds": 22.793134243999987,
+          "valid": true,
+          "verify_seconds": 4.769283882999986,
+          "witness_seconds": 0.2696818379999968
+        },
+        {
+          "export_seconds": 2.808189760999994,
+          "export_timings": {
+            "build_r1cs": 0.0006541639999966264,
+            "export_static_r1cs": 0.010923821999995198,
+            "export_variables": 0.6825769820000005,
+            "resolve_witness": 2.1139542319999975
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300097,
+          "prove_seconds": 20.734647758000023,
+          "total_sent_bytes": 316465,
+          "user_online_seconds": 23.762351310000014,
+          "valid": true,
+          "verify_seconds": 4.389137576999985,
+          "witness_seconds": 0.21951379099999713
+        },
+        {
+          "export_seconds": 3.0007170480000127,
+          "export_timings": {
+            "build_r1cs": 0.000598773000035635,
+            "export_static_r1cs": 0.006046174999994491,
+            "export_variables": 0.6222801000000118,
+            "resolve_witness": 2.3717136220000157
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302609,
+          "prove_seconds": 22.169130628999994,
+          "total_sent_bytes": 318977,
+          "user_online_seconds": 25.414354678999985,
+          "valid": true,
+          "verify_seconds": 4.400824419000003,
+          "witness_seconds": 0.24450700199997755
+        },
+        {
+          "export_seconds": 3.112780337999993,
+          "export_timings": {
+            "build_r1cs": 0.0011578859999872293,
+            "export_static_r1cs": 0.00816227899997557,
+            "export_variables": 0.6356960200000117,
+            "resolve_witness": 2.467675390000011
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299873,
+          "prove_seconds": 21.858528695000018,
+          "total_sent_bytes": 316241,
+          "user_online_seconds": 25.225505819000034,
+          "valid": true,
+          "verify_seconds": 5.111598804000039,
+          "witness_seconds": 0.2541967860000227
+        },
+        {
+          "export_seconds": 3.1552794710000285,
+          "export_timings": {
+            "build_r1cs": 0.0005209710000144696,
+            "export_static_r1cs": 0.01054323599998952,
+            "export_variables": 0.6463748229999737,
+            "resolve_witness": 2.4977632049999556
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301993,
+          "prove_seconds": 24.076413151999986,
+          "total_sent_bytes": 318361,
+          "user_online_seconds": 27.48379826300004,
+          "valid": true,
+          "verify_seconds": 4.942327816000045,
+          "witness_seconds": 0.2521056400000248
+        },
+        {
+          "export_seconds": 4.115204969999979,
+          "export_timings": {
+            "build_r1cs": 0.00046997200001897,
+            "export_static_r1cs": 0.01121950399999605,
+            "export_variables": 0.6268549989999883,
+            "resolve_witness": 3.4765877570000043
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298169,
+          "prove_seconds": 22.42285167099999,
+          "total_sent_bytes": 314537,
+          "user_online_seconds": 26.782393356999933,
+          "valid": true,
+          "verify_seconds": 4.742969721000009,
+          "witness_seconds": 0.24433671599996387
+        },
+        {
+          "export_seconds": 3.1448952150000196,
+          "export_timings": {
+            "build_r1cs": 0.0017034439999861206,
+            "export_static_r1cs": 0.007937698000034743,
+            "export_variables": 0.6558475899999507,
+            "resolve_witness": 2.4792760800000337
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299513,
+          "prove_seconds": 20.96391374199999,
+          "total_sent_bytes": 315881,
+          "user_online_seconds": 24.378389225999967,
+          "valid": true,
+          "verify_seconds": 4.9831694380000044,
+          "witness_seconds": 0.26958026899995957
+        },
+        {
+          "export_seconds": 2.922808347,
+          "export_timings": {
+            "build_r1cs": 0.0005061360000127024,
+            "export_static_r1cs": 0.008831982999993215,
+            "export_variables": 0.6097635720000198,
+            "resolve_witness": 2.3036320229999774
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300705,
+          "prove_seconds": 22.02354549300003,
+          "total_sent_bytes": 317073,
+          "user_online_seconds": 25.20149015700008,
+          "valid": true,
+          "verify_seconds": 5.255959366000013,
+          "witness_seconds": 0.25513631700005135
+        },
+        {
+          "export_seconds": 2.776519453999981,
+          "export_timings": {
+            "build_r1cs": 0.0007549079999762398,
+            "export_static_r1cs": 0.009187445999998545,
+            "export_variables": 0.6045901809999918,
+            "resolve_witness": 2.1619102180000027
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 301753,
+          "prove_seconds": 22.545202399999994,
+          "total_sent_bytes": 318121,
+          "user_online_seconds": 25.58672403999998,
+          "valid": true,
+          "verify_seconds": 5.015723749000017,
+          "witness_seconds": 0.2650021860000038
+        },
+        {
+          "export_seconds": 2.8749381279999966,
+          "export_timings": {
+            "build_r1cs": 0.0011326289999828987,
+            "export_static_r1cs": 0.008462891000021955,
+            "export_variables": 0.5934109450000165,
+            "resolve_witness": 2.2718461270000034
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299441,
+          "prove_seconds": 21.898774661000004,
+          "total_sent_bytes": 315809,
+          "user_online_seconds": 25.039091018000022,
+          "valid": true,
+          "verify_seconds": 4.9880828640000345,
+          "witness_seconds": 0.26537822900002084
+        },
+        {
+          "export_seconds": 2.9963775510000232,
+          "export_timings": {
+            "build_r1cs": 0.0011774399999922025,
+            "export_static_r1cs": 0.008176390000016909,
+            "export_variables": 0.6177526259999695,
+            "resolve_witness": 2.3691927620000115
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299889,
+          "prove_seconds": 23.262029095999992,
+          "total_sent_bytes": 316257,
+          "user_online_seconds": 26.518316655000035,
+          "valid": true,
+          "verify_seconds": 5.13712801500003,
+          "witness_seconds": 0.25991000800001984
+        },
+        {
+          "export_seconds": 2.884499943999913,
+          "export_timings": {
+            "build_r1cs": 0.0005978770000183431,
+            "export_static_r1cs": 0.010740273000010347,
+            "export_variables": 0.6358141220000562,
+            "resolve_witness": 2.237265751999985
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299361,
+          "prove_seconds": 23.698898558999986,
+          "total_sent_bytes": 315729,
+          "user_online_seconds": 26.86500312699991,
+          "valid": true,
+          "verify_seconds": 5.034232031999977,
+          "witness_seconds": 0.2816046240000105
+        },
+        {
+          "export_seconds": 4.110268122999969,
+          "export_timings": {
+            "build_r1cs": 0.0005527280000023893,
+            "export_static_r1cs": 0.012178329999983362,
+            "export_variables": 0.6105154809999931,
+            "resolve_witness": 3.486928560000024
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298089,
+          "prove_seconds": 21.636792035999974,
+          "total_sent_bytes": 314457,
+          "user_online_seconds": 25.991967272999887,
+          "valid": true,
+          "verify_seconds": 4.942740864000029,
+          "witness_seconds": 0.24490711399994325
+        },
+        {
+          "export_seconds": 2.8379420060000484,
+          "export_timings": {
+            "build_r1cs": 0.0008088019999377138,
+            "export_static_r1cs": 0.010713840999983404,
+            "export_variables": 0.621709194999994,
+            "resolve_witness": 2.2046279859999913
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302721,
+          "prove_seconds": 24.47856401599995,
+          "total_sent_bytes": 319089,
+          "user_online_seconds": 27.611308017000056,
+          "valid": true,
+          "verify_seconds": 5.473355878999996,
+          "witness_seconds": 0.2948019950000571
+        },
+        {
+          "export_seconds": 3.118649739000034,
+          "export_timings": {
+            "build_r1cs": 0.0009409960000539286,
+            "export_static_r1cs": 0.009656001000053038,
+            "export_variables": 0.6812169229999654,
+            "resolve_witness": 2.4267503229999647
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 303081,
+          "prove_seconds": 21.91510645300002,
+          "total_sent_bytes": 319449,
+          "user_online_seconds": 25.3354127880001,
+          "valid": true,
+          "verify_seconds": 4.9544258889999355,
+          "witness_seconds": 0.30165659600004346
+        },
+        {
+          "export_seconds": 2.9875434649999306,
+          "export_timings": {
+            "build_r1cs": 0.00043679800000973046,
+            "export_static_r1cs": 0.008499488999973437,
+            "export_variables": 0.6750031029999946,
+            "resolve_witness": 2.303512203999958
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299177,
+          "prove_seconds": 21.961183044999984,
+          "total_sent_bytes": 315545,
+          "user_online_seconds": 25.20350839699995,
+          "valid": true,
+          "verify_seconds": 4.814985253999907,
+          "witness_seconds": 0.25478188700003557
+        },
+        {
+          "export_seconds": 2.878208483000094,
+          "export_timings": {
+            "build_r1cs": 0.0006263170000693208,
+            "export_static_r1cs": 0.008756093999977566,
+            "export_variables": 0.6319200490000867,
+            "resolve_witness": 2.2368317839999463
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297993,
+          "prove_seconds": 21.261196657000028,
+          "total_sent_bytes": 314361,
+          "user_online_seconds": 24.423794847000067,
+          "valid": true,
+          "verify_seconds": 4.55442202100005,
+          "witness_seconds": 0.2843897069999457
+        },
+        {
+          "export_seconds": 2.8507107650000307,
+          "export_timings": {
+            "build_r1cs": 0.00043823200007864216,
+            "export_static_r1cs": 0.00839353799995024,
+            "export_variables": 0.632956791999959,
+            "resolve_witness": 2.208825858999944
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 300609,
+          "prove_seconds": 21.34842702600008,
+          "total_sent_bytes": 316977,
+          "user_online_seconds": 24.430382899000165,
+          "valid": true,
+          "verify_seconds": 4.660562069999969,
+          "witness_seconds": 0.23124510800005282
+        },
+        {
+          "export_seconds": 2.807095123999943,
+          "export_timings": {
+            "build_r1cs": 0.0006185180000102264,
+            "export_static_r1cs": 0.007952282000019295,
+            "export_variables": 0.5980398519999426,
+            "resolve_witness": 2.2004124719999254
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 299681,
+          "prove_seconds": 20.815468280000005,
+          "total_sent_bytes": 316049,
+          "user_online_seconds": 23.84727412799998,
+          "valid": true,
+          "verify_seconds": 4.883501272000103,
+          "witness_seconds": 0.22471072400003322
+        },
+        {
+          "export_seconds": 4.363986092000005,
+          "export_timings": {
+            "build_r1cs": 0.0008845739999969737,
+            "export_static_r1cs": 0.00673961900008635,
+            "export_variables": 0.6409091740000576,
+            "resolve_witness": 3.7153798320000533
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297729,
+          "prove_seconds": 22.314325086000053,
+          "total_sent_bytes": 314097,
+          "user_online_seconds": 26.961069486000042,
+          "valid": true,
+          "verify_seconds": 4.707062040999972,
+          "witness_seconds": 0.282758307999984
+        },
+        {
+          "export_seconds": 2.816626198999984,
+          "export_timings": {
+            "build_r1cs": 0.0005671609999353677,
+            "export_static_r1cs": 0.009008664000020872,
+            "export_variables": 0.6030468310000288,
+            "resolve_witness": 2.2039220789999945
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298361,
+          "prove_seconds": 23.663741295000023,
+          "total_sent_bytes": 314729,
+          "user_online_seconds": 26.731807007000043,
+          "valid": true,
+          "verify_seconds": 5.187287245999983,
+          "witness_seconds": 0.25143951300003664
+        },
+        {
+          "export_seconds": 2.849174206999919,
+          "export_timings": {
+            "build_r1cs": 0.0005029310000281839,
+            "export_static_r1cs": 0.0088386539999874,
+            "export_variables": 0.6276601179999943,
+            "resolve_witness": 2.2120868550000523
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298945,
+          "prove_seconds": 23.848031827,
+          "total_sent_bytes": 315313,
+          "user_online_seconds": 26.936853751999934,
+          "valid": true,
+          "verify_seconds": 5.075345168000013,
+          "witness_seconds": 0.23964771800001472
+        },
+        {
+          "export_seconds": 3.098114301999999,
+          "export_timings": {
+            "build_r1cs": 0.0004926160000877644,
+            "export_static_r1cs": 0.009189144000060878,
+            "export_variables": 0.6744571599999745,
+            "resolve_witness": 2.4138792119999835
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302817,
+          "prove_seconds": 23.171138189999965,
+          "total_sent_bytes": 319185,
+          "user_online_seconds": 26.512405260999913,
+          "valid": true,
+          "verify_seconds": 4.843413437000095,
+          "witness_seconds": 0.24315276899994842
+        },
+        {
+          "export_seconds": 2.8634589839999762,
+          "export_timings": {
+            "build_r1cs": 0.0005695150000519789,
+            "export_static_r1cs": 0.0073073119999662595,
+            "export_variables": 0.6105050029999575,
+            "resolve_witness": 2.2450012409999545
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302649,
+          "prove_seconds": 21.285128234000013,
+          "total_sent_bytes": 319017,
+          "user_online_seconds": 24.41092755300008,
+          "valid": true,
+          "verify_seconds": 4.880967983000005,
+          "witness_seconds": 0.2623403350000899
+        },
+        {
+          "export_seconds": 2.9360529309999492,
+          "export_timings": {
+            "build_r1cs": 0.0005674020000014934,
+            "export_static_r1cs": 0.006840466999960881,
+            "export_variables": 0.627081637999936,
+            "resolve_witness": 2.3014891879998913
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302193,
+          "prove_seconds": 21.729393345999938,
+          "total_sent_bytes": 318561,
+          "user_online_seconds": 24.930580768999903,
+          "valid": true,
+          "verify_seconds": 4.355340523999985,
+          "witness_seconds": 0.2651344920000156
+        },
+        {
+          "export_seconds": 2.750054588000012,
+          "export_timings": {
+            "build_r1cs": 0.0004262239999661688,
+            "export_static_r1cs": 0.006675553999912154,
+            "export_variables": 0.5765017100000023,
+            "resolve_witness": 2.166375691999974
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 298969,
+          "prove_seconds": 22.045011388000034,
+          "total_sent_bytes": 315337,
+          "user_online_seconds": 25.03652465999994,
+          "valid": true,
+          "verify_seconds": 4.834512883999992,
+          "witness_seconds": 0.24145868399989467
+        },
+        {
+          "export_seconds": 4.288422641000011,
+          "export_timings": {
+            "build_r1cs": 0.000576518999992004,
+            "export_static_r1cs": 0.008206888000017898,
+            "export_variables": 0.740248850999933,
+            "resolve_witness": 3.5393158770000355
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302585,
+          "prove_seconds": 22.469083432999923,
+          "total_sent_bytes": 318953,
+          "user_online_seconds": 26.981386382999972,
+          "valid": true,
+          "verify_seconds": 4.813960276999978,
+          "witness_seconds": 0.22388030900003741
+        },
+        {
+          "export_seconds": 2.8855671320000056,
+          "export_timings": {
+            "build_r1cs": 0.0008037479999529751,
+            "export_static_r1cs": 0.007806713000036325,
+            "export_variables": 0.6122448109999823,
+            "resolve_witness": 2.2646181509999224
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 302049,
+          "prove_seconds": 22.226448137000034,
+          "total_sent_bytes": 318417,
+          "user_online_seconds": 25.34219254100003,
+          "valid": true,
+          "verify_seconds": 5.022077287000002,
+          "witness_seconds": 0.23017727199999172
+        },
+        {
+          "export_seconds": 2.8669713399999637,
+          "export_timings": {
+            "build_r1cs": 0.0005390530000113358,
+            "export_static_r1cs": 0.005825555000001259,
+            "export_variables": 0.6216771049998897,
+            "resolve_witness": 2.2388403630000084
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 297657,
+          "prove_seconds": 22.486741345000155,
+          "total_sent_bytes": 314025,
+          "user_online_seconds": 25.57790603100011,
+          "valid": true,
+          "verify_seconds": 5.164333228000032,
+          "witness_seconds": 0.22419334599999274
+        },
+        {
+          "export_seconds": 2.9515854250000757,
+          "export_timings": {
+            "build_r1cs": 0.000537445999952979,
+            "export_static_r1cs": 0.0064604690001033305,
+            "export_variables": 0.6495732869998392,
+            "resolve_witness": 2.294923193000159
+          },
+          "ots_keygen_seconds": 0.0,
+          "ots_sign_seconds": 0.0,
+          "ots_verify_seconds": 0.0,
+          "proof_size_bytes": 295681,
+          "prove_seconds": 22.752844306000043,
+          "total_sent_bytes": 312049,
+          "user_online_seconds": 25.93841294200024,
+          "valid": true,
+          "verify_seconds": 4.663728040000024,
+          "witness_seconds": 0.23398321100012254
+        }
+      ],
+      "show_instance_seconds": 0.25385374980000963,
+      "show_instance_stddev_seconds": 0.021215964975293336,
+      "static_export_seconds": 3.510283181999995,
+      "total_sent_bytes": 316572.73333333334,
+      "user_online_seconds": 25.57514222096668,
+      "user_online_stddev_seconds": 1.1696146260773639,
+      "valid": true,
+      "variables": 190342,
+      "verify_seconds": 4.88674863493334,
+      "verify_stddev_seconds": 0.2544940447031483
+    }
+  ]
+}

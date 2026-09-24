@@ -1,0 +1,113 @@
+{
+  "capss_microbench": {
+    "iterations": 30,
+    "keygen_avg_seconds": 0.0036709457000001795,
+    "label": "G256-5.fast.extended",
+    "sign_avg_seconds": 0.6644866562666667,
+    "verify_avg_seconds": 0.2250868717666666
+  },
+  "full_flow": {
+    "issuance_checks": {
+      "credential_signature_ok": true,
+      "device_binding_ok": true,
+      "disclosure_ok": true,
+      "issuance_indexes": [
+        0,
+        2,
+        11,
+        15
+      ]
+    },
+    "show_d4": {
+      "aurora_total_seconds": 8.309182518,
+      "constraints": 62999,
+      "disclosed_count": 4,
+      "export_seconds": 1.5380021050000003,
+      "primary_inputs": 12,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 4.736090377,
+      "show_instance_seconds": 0.6293108700000012,
+      "total_sent_bytes": 286193,
+      "valid": true,
+      "variables": 64251,
+      "verify_seconds": 2.0084109860000012
+    },
+    "timings": [
+      {
+        "name": "Setup(lambda,l)",
+        "seconds": 1.2091999999519487e-05,
+        "section": "setup"
+      },
+      {
+        "name": "Create entities / CAPSS keygen",
+        "seconds": 3.4929211860000002,
+        "section": "setup"
+      },
+      {
+        "name": "Precompute Show R1CS template d=4",
+        "seconds": 5.237189895,
+        "section": "setup"
+      },
+      {
+        "name": "Governance attributes",
+        "seconds": 0.00011658899999744676,
+        "section": "enrollment"
+      },
+      {
+        "name": "Issuer samples nonce_I, idx_I",
+        "seconds": 8.27590000014311e-05,
+        "section": "issuance"
+      },
+      {
+        "name": "User encodes issue || nonce_I",
+        "seconds": 5.383000001302207e-06,
+        "section": "issuance"
+      },
+      {
+        "name": "SE signs issue || nonce_I",
+        "seconds": 0.5634832999999979,
+        "section": "issuance"
+      },
+      {
+        "name": "User builds Merkle root || dpk",
+        "seconds": 0.013812586000000238,
+        "section": "issuance"
+      },
+      {
+        "name": "User opens issuance attrs",
+        "seconds": 6.097900000057166e-05,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies SE binding",
+        "seconds": 0.2336551170000014,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies Merkle openings",
+        "seconds": 0.019589873999997565,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer signs credential",
+        "seconds": 0.6029245460000006,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies credential",
+        "seconds": 0.2233549960000012,
+        "section": "issuance"
+      }
+    ],
+    "total_seconds": 46.177134251000005
+  },
+  "metadata": {
+    "attribute_count": 16,
+    "capss_scheme": "G256-5.fast.extended",
+    "default_disclosure_count": 4,
+    "scheme": "BDAC-CAPSS-Aurora",
+    "security_parameter": 128,
+    "seed": 20260721
+  },
+  "scaling": []
+}

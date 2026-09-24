@@ -1,4 +1,10 @@
 results/*
 !results/.gitkeep
 __pycache__/
-
+implementation/**/__pycache__/
+implementation/**/target/
+implementation/**/build/
+implementation/**/build-openmp/
+implementation/BDAC/output/
+implementation/BDAC/outputs/
+*.pyc

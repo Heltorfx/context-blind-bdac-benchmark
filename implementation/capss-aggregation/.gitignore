@@ -1,0 +1,8 @@
+build
+libiop
+r1cs-field.txt
+r1cs-constraints.txt
+r1cs-primary-inputs.txt
+r1cs-auxiliary-inputs.txt
+.DS_Store
+sig*.json

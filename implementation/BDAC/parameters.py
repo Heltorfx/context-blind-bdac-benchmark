@@ -1,0 +1,24 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+
+IMPLEMENTATION_ROOT = Path(__file__).resolve().parents[1]
+SMALLWOOD_PATH = IMPLEMENTATION_ROOT / "smallwood-python"
+MERKLE_PACKAGE_PATH = SMALLWOOD_PATH / "smallwood" / "commit" / "merkle"
+
+ATTRIBUTE_COUNT = 16
+SECURITY_LEVEL = 128
+ATTRIBUTE_SIZE = 2 * (SECURITY_LEVEL // 8)
+MERKLE_ARITY = (4, 4)
+DEVICE_PUBLIC_KEY_SIZE = 32
+DISCLOSURE_COUNT = 4
+
+CAPSS_FIELD_ORDER = 0x30644E72E131A029B85045B68181585D2833E84879B9709143E1F593F0000001
+CAPSS_GRIFFIN_ALPHA = 5
+CAPSS_SCHEME_LABEL = "G256-5.fast.extended"
+PRESENTATION_DOMAIN_TAG = int.from_bytes(b"present", "big")
+SIMULATION_DOMAIN_TAG = int.from_bytes(b"sim", "big")
+
+MERKLE_HASH_SHAKE = "shake"
+MERKLE_HASH_GRIFFIN = "griffin"

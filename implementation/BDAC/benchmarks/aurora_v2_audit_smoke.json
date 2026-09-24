@@ -1,0 +1,37 @@
+{
+  "note": "Fixed R1CS and witness; fresh proof randomness; one warmup per mode. Not full protocol timing.",
+  "modes": {
+    "normal": {
+      "samples": [
+        {
+          "prove_seconds": 3.6600956349999976,
+          "verify_seconds": 1.5818740110000036,
+          "proof_bytes": 304401
+        }
+      ],
+      "prove_mean_seconds": 3.6600956349999976,
+      "verify_mean_seconds": 1.5818740110000036,
+      "proof_mean_KB": 304.401
+    },
+    "v2": {
+      "samples": [
+        {
+          "prove_seconds": 4.381463334999999,
+          "verify_seconds": 1.6363466099999968,
+          "proof_bytes": 327025
+        }
+      ],
+      "prove_mean_seconds": 4.381463334999999,
+      "verify_mean_seconds": 1.6363466099999968,
+      "proof_mean_KB": 327.025
+    }
+  },
+  "old_normal_proof_valid": true,
+  "rejection_tests": {
+    "round_salt": true,
+    "proof_payload": true,
+    "public_challenge": true,
+    "trailing_data": true
+  },
+  "cross_version_rejected": true
+}

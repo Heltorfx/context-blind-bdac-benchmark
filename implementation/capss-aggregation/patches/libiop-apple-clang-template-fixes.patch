@@ -1,0 +1,92 @@
+Cross-platform fixes for libiop on macOS / Apple Clang.
+
+Two classes of issue:
+
+1. Uninstantiated-template bugs that Apple Clang flags at parse time
+   (two-phase lookup) but GCC silently accepted:
+     * member-access via `->` on a reference (`other->x` where `other`
+       is `const T&`), should be `other.x`
+     * member name typos (`index`/`coeff` instead of `index_`/`coeff_`)
+
+2. Use of GCC-specific non-standard headers (`<bits/stdc++.h>`) that
+   don't exist in libc++.
+
+Fixes:
+  * multiplicative_subgroup_base::operator==  (subgroup.tcc)
+  * linear_subspace::operator==               (subspace.tcc)
+  * variable::operator==                      (variable.tcc)
+  * linear_term::operator*(FieldT)            (variable.tcc)
+  * linear_term::operator-()                  (variable.tcc)
+  * linear_term::operator==                   (variable.tcc)
+  * drop <bits/stdc++.h>                      (merkle_tree.hpp)
+
+--- a/libiop/algebra/field_subset/subgroup.tcc
++++ b/libiop/algebra/field_subset/subgroup.tcc
+@@ -206,7 +206,7 @@
+ template<typename FieldT>
+ bool multiplicative_subgroup_base<FieldT>::operator==(const multiplicative_subgroup_base<FieldT> &other) const
+ {
+-    return this->g_ == other->g_ && this->order_ == other->order_;
++    return this->g_ == other.g_ && this->order_ == other.order_;
+ }
+
+ template<typename FieldT>
+--- a/libiop/algebra/field_subset/subspace.tcc
++++ b/libiop/algebra/field_subset/subspace.tcc
+@@ -117,7 +117,7 @@
+ template<typename FieldT>
+ bool linear_subspace<FieldT>::operator==(const linear_subspace<FieldT> &other) const
+ {
+-    return this->basis_ == other->basis_;
++    return this->basis_ == other.basis_;
+ }
+
+ template<typename FieldT>
+--- a/libiop/relations/variable.tcc
++++ b/libiop/relations/variable.tcc
+@@ -60,7 +60,7 @@
+ template<typename FieldT>
+ bool variable<FieldT>::operator==(const variable<FieldT> &other) const
+ {
+-    return (this->index == other.index);
++    return (this->index_ == other.index_);
+ }
+
+ template<typename FieldT>
+@@ -126,7 +126,7 @@
+ template<typename FieldT>
+ linear_term<FieldT> linear_term<FieldT>::operator*(const FieldT &field_coeff) const
+ {
+-    return linear_term<FieldT>(this->index, field_coeff * this->coeff);
++    return linear_term<FieldT>(this->index_, field_coeff * this->coeff_);
+ }
+
+ template<typename FieldT>
+@@ -168,14 +168,14 @@
+ template<typename FieldT>
+ linear_term<FieldT> linear_term<FieldT>::operator-() const
+ {
+-    return linear_term<FieldT>(this->index, -this->coeff);
++    return linear_term<FieldT>(this->index_, -this->coeff_);
+ }
+
+ template<typename FieldT>
+ bool linear_term<FieldT>::operator==(const linear_term<FieldT> &other) const
+ {
+-    return (this->index == other.index &&
+-            this->coeff == other.coeff);
++    return (this->index_ == other.index_ &&
++            this->coeff_ == other.coeff_);
+ }
+
+ template<typename FieldT>
+--- a/libiop/bcs/merkle_tree.hpp
++++ b/libiop/bcs/merkle_tree.hpp
+@@ -13,7 +13,6 @@
+ #include <cstddef>
+ #include <numeric>
+ #include <vector>
+-#include <bits/stdc++.h>
+ 
+ #include "libiop/algebra/field_subset/field_subset.hpp"
+ #include "libiop/bcs/hashing/hashing.hpp"

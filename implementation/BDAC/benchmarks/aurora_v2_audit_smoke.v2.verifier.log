@@ -1,0 +1,98 @@
+nb_batched = 1
+num_inputs_per_inst = 11
+num_inputs = 15
+num_variables_per_inst = 64139
+num_variables = 65535
+num_constraints_per_inst = 62888
+num_constraints = 65536
+(enter) Aurora SNARK verifier              	[             ]	(1788166572.3475s x0.00 from start)
+  
+Aurora SNARK parameters
+  * security parameter (bits) = 128
+  * RS extra dimensions = 1
+  * LDT reducer soundness type = heuristic
+  * FRI soundness type = heuristic
+  * zero-knowledge = true
+  * domain type = multiplicative coset
+
+Aurora IOP parameters
+  * target security parameter = 128
+  * achieved security parameter = 130.2
+  * RS extra dimensions = 1
+  * codeword domain dim = 19
+  * constraint domain dim = 16
+  * variable domain dim = 16
+  * query bound = 185
+  * make zk = true
+  * domain type = multiplicative coset
+
+Multi lincheck parameters
+  * target interactive soundness error (bits) = 131
+  * achieved interactive soundness error (bits) = 237.0
+  * interactive repetitions = 1
+  * constraint domain dim = 16
+  * make zk = true
+  * domain type = multiplicative coset
+
+LDT instance reducer parameters
+  * soundness type = heuristic
+  * target interactive soundness error (bits) = 131
+  * achieved interactive soundness error (bits) = 234.0
+  * codeword domain dim = 19
+  * max tested degree bound = 196608
+  * max constraint degree bound = 131441
+  * absolute proximity parameter = 327679
+  * fractional proximity parameter = 0.624998
+  * num output LDT instances = 1
+
+FRI parameters
+  * soundness type = heuristic
+  * target interactive soundness error (bits) = 131
+  * achieved interactive soundness error (bits) = 253.0
+  * target query soundness error (bits) = 129
+  * achieved query soundness error (bits) = 130.2
+  * codeword domain dim = 19
+  * effective proximity parameter = 0.624998
+  * number of interactive repetitions = 1
+  * number of query repetitions = 92
+  * localization parameter array = { 1 3 3 3 3 3 }
+  * number of reductions = 6
+* BCS mode = v2
+
+BCS parameters
+  * digest_len (bytes) = 32
+  * digest_len (bits) = 256
+  * hash_type = blake2b
+  (enter) Aurora IOP protocol initialization and registration	[             ]	(1788166572.3477s x0.00 from start)
+    (enter) verifier_seal_interaction_registrations	[             ]	(1788166572.3742s x0.00 from start)
+    (leave) verifier_seal_interaction_registrations	[0.0030s x1.00]	(1788166572.3772s x0.00 from start)
+  (leave) Aurora IOP protocol initialization and registration	[0.0303s x0.98]	(1788166572.3779s x0.00 from start)
+  (enter) Check semantic validity of IOP transcript	[             ]	(1788166572.3780s x0.00 from start)
+  (leave) Check semantic validity of IOP transcript	[0.0000s x1.05]	(1788166572.3780s x0.00 from start)
+  (enter) Construct R1CS verifier state      	[             ]	(1788166572.3780s x0.00 from start)
+    (enter) multi_lincheck compute alpha powers	[             ]	(1788166572.3780s x0.00 from start)
+    (leave) multi_lincheck compute alpha powers	[0.0025s x1.00]	(1788166572.3804s x0.00 from start)
+    (enter) multi_lincheck compute p_alpha_prime	[             ]	(1788166572.3804s x0.00 from start)
+    (leave) multi_lincheck compute p_alpha_prime	[0.0015s x1.00]	(1788166572.3820s x0.00 from start)
+    (enter) multi_lincheck compute p_alpha_ABC 	[             ]	(1788166572.3821s x0.00 from start)
+    (leave) multi_lincheck compute p_alpha_ABC 	[0.0734s x1.00]	(1788166572.4555s x0.00 from start)
+    (enter) multi_lincheck IFFT p_alphas       	[             ]	(1788166572.4555s x0.00 from start)
+      (enter) Call to multiplicative_IFFT_wrapper	[             ]	(1788166572.4563s x0.00 from start)
+        * Vector size: 65536
+        * Coset size: 65536
+      (leave) Call to multiplicative_IFFT_wrapper	[0.0206s x6.71]	(1788166572.4770s x0.00 from start)
+      (enter) Call to multiplicative_IFFT_wrapper	[             ]	(1788166572.4779s x0.00 from start)
+        * Vector size: 65536
+        * Coset size: 65536
+      (leave) Call to multiplicative_IFFT_wrapper	[0.0178s x8.88]	(1788166572.4957s x0.00 from start)
+    (leave) multi_lincheck IFFT p_alphas       	[0.0411s x7.27]	(1788166572.4967s x0.00 from start)
+  (leave) Construct R1CS verifier state      	[0.1188s x3.17]	(1788166572.4967s x0.00 from start)
+  (enter) Check LDT verifier predicate       	[             ]	(1788166572.4968s x0.00 from start)
+    * Number of FRI interactions: 1
+    * Number of FRI query sets per interaction: 92
+    * Total number of FRI queries over all query sets (incl. repeated queries): 3864
+  (leave) Check LDT verifier predicate       	[1.1666s x1.06]	(1788166573.6634s x0.00 from start)
+  * IOP transcript valid: true
+  * Full protocol decision predicate satisfied: true
+(leave) Aurora SNARK verifier              	[1.3160s x1.25]	(1788166573.6635s x0.00 from start)
+[OK] VALID

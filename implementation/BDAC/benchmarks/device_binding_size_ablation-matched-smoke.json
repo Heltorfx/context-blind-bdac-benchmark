@@ -1,0 +1,39 @@
+{
+  "aurora_version": "v2",
+  "credential_only": {
+    "iterations": 1,
+    "proof_size_bytes_max": 325705,
+    "proof_size_bytes_mean": 325705.0,
+    "proof_size_bytes_min": 325705,
+    "proof_size_bytes_stddev": 0.0,
+    "r1cs": {
+      "constraints": 62888,
+      "primary_inputs": 10,
+      "variables": 64139
+    },
+    "samples": [
+      325705
+    ]
+  },
+  "device_bound": {
+    "iterations": 1,
+    "proof_size_bytes_max": 327721,
+    "proof_size_bytes_mean": 327721.0,
+    "proof_size_bytes_min": 327721,
+    "proof_size_bytes_stddev": 0.0,
+    "r1cs": {
+      "constraints": 62888,
+      "primary_inputs": 11,
+      "variables": 64139
+    },
+    "samples": [
+      327721
+    ]
+  },
+  "observed_device_binding_delta": {
+    "proof_size_bytes": 2016.0,
+    "proof_size_percent": 0.6189650143534786,
+    "proof_size_ratio": 1.0061896501435348
+  },
+  "omp_num_threads": "8"
+}

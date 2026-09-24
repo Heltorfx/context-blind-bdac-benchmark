@@ -1,0 +1,21 @@
+[package]
+name = "rust_griffin"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rust_griffin"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ark-bn254 = "0.4"
+ark-ff = "0.4"
+num-bigint = "0.4"
+num-traits = "0.2"
+pyo3 = { version = "0.22", features = ["extension-module"] }
+rayon = "1.10"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3

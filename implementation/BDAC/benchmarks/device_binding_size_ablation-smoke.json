@@ -1,0 +1,39 @@
+{
+  "aurora_version": "v2",
+  "credential_only": {
+    "iterations": 1,
+    "proof_size_bytes_max": 395305,
+    "proof_size_bytes_mean": 395305.0,
+    "proof_size_bytes_min": 395305,
+    "proof_size_bytes_stddev": 0.0,
+    "r1cs": {
+      "constraints": 31864,
+      "primary_inputs": 10,
+      "variables": 32509
+    },
+    "samples": [
+      395305
+    ]
+  },
+  "device_binding_overhead": {
+    "proof_size_bytes": -70144.0,
+    "proof_size_percent": -17.744273409139776,
+    "proof_size_ratio": 0.8225572659086022
+  },
+  "device_bound": {
+    "iterations": 1,
+    "proof_size_bytes_max": 325161,
+    "proof_size_bytes_mean": 325161.0,
+    "proof_size_bytes_min": 325161,
+    "proof_size_bytes_stddev": 0.0,
+    "r1cs": {
+      "constraints": 62888,
+      "primary_inputs": 11,
+      "variables": 64139
+    },
+    "samples": [
+      325161
+    ]
+  },
+  "omp_num_threads": "8"
+}

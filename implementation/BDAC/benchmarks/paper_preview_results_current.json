@@ -1,0 +1,170 @@
+{
+  "capss_microbench": {
+    "iterations": 3,
+    "keygen_avg_seconds": 0.003859582333329096,
+    "label": "G256-5.fast.extended",
+    "sign_avg_seconds": 0.7259521016666591,
+    "verify_avg_seconds": 0.2181445323333359
+  },
+  "full_flow": {
+    "issuance_checks": {
+      "credential_signature_ok": true,
+      "device_binding_ok": true,
+      "disclosure_ok": true,
+      "issuance_indexes": [
+        2,
+        5,
+        6,
+        10
+      ]
+    },
+    "show_d4": {
+      "aurora_total_seconds": 12.348100250999991,
+      "constraints": 62999,
+      "disclosed_count": 4,
+      "export_seconds": 4.089084972000009,
+      "primary_inputs": 12,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 5.970712407000008,
+      "show_instance_seconds": 0.6480541829999993,
+      "total_sent_bytes": 286193,
+      "valid": true,
+      "variables": 64251,
+      "verify_seconds": 2.2470092189999917
+    },
+    "timings": [
+      {
+        "name": "Setup(lambda,l)",
+        "seconds": 1.4775000011013617e-05,
+        "section": "setup"
+      },
+      {
+        "name": "Create entities / CAPSS keygen",
+        "seconds": 3.601660639000002,
+        "section": "setup"
+      },
+      {
+        "name": "Precompute Show R1CS template d=4",
+        "seconds": 6.377773341000008,
+        "section": "setup"
+      },
+      {
+        "name": "Governance attributes",
+        "seconds": 0.00012792699999408796,
+        "section": "enrollment"
+      },
+      {
+        "name": "Issuer samples nonce_I, idx_I",
+        "seconds": 0.0001524640000098998,
+        "section": "issuance"
+      },
+      {
+        "name": "User encodes issue || nonce_I",
+        "seconds": 7.480999997255822e-06,
+        "section": "issuance"
+      },
+      {
+        "name": "SE signs issue || nonce_I",
+        "seconds": 0.871468269999994,
+        "section": "issuance"
+      },
+      {
+        "name": "User builds Merkle root || dpk",
+        "seconds": 0.01742132699999388,
+        "section": "issuance"
+      },
+      {
+        "name": "User opens issuance attrs",
+        "seconds": 4.733100000464674e-05,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies SE binding",
+        "seconds": 0.2686428290000009,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies Merkle openings",
+        "seconds": 0.02766969299999289,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer signs credential",
+        "seconds": 0.6299136390000086,
+        "section": "issuance"
+      },
+      {
+        "name": "Issuer verifies credential",
+        "seconds": 0.22537203999999633,
+        "section": "issuance"
+      }
+    ],
+    "total_seconds": 106.336699594
+  },
+  "metadata": {
+    "attribute_count": 16,
+    "capss_scheme": "G256-5.fast.extended",
+    "default_disclosure_count": 4,
+    "scheme": "BDAC-CAPSS-Aurora",
+    "security_parameter": 128,
+    "seed": 20260721
+  },
+  "scaling": [
+    {
+      "aurora_total_seconds": 12.400227811000008,
+      "constraints": 62288,
+      "disclosed_count": 1,
+      "export_seconds": 4.78559886299999,
+      "primary_inputs": 6,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 5.5649626450000085,
+      "show_instance_seconds": 0.9154815210000038,
+      "total_sent_bytes": 286085,
+      "valid": true,
+      "variables": 63510,
+      "verify_seconds": 2.008134424000005
+    },
+    {
+      "aurora_total_seconds": 12.363519071000013,
+      "constraints": 62525,
+      "disclosed_count": 2,
+      "export_seconds": 4.669179103999994,
+      "primary_inputs": 8,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 5.178487272000012,
+      "show_instance_seconds": 0.8668430200000046,
+      "total_sent_bytes": 286121,
+      "valid": true,
+      "variables": 63757,
+      "verify_seconds": 2.4741783209999824
+    },
+    {
+      "aurora_total_seconds": 12.673659326000006,
+      "constraints": 62999,
+      "disclosed_count": 4,
+      "export_seconds": 5.350888757999996,
+      "primary_inputs": 12,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 5.212920760999992,
+      "show_instance_seconds": 1.227153866000009,
+      "total_sent_bytes": 286193,
+      "valid": true,
+      "variables": 64251,
+      "verify_seconds": 2.077210506
+    },
+    {
+      "aurora_total_seconds": 14.339159230999996,
+      "constraints": 63947,
+      "disclosed_count": 8,
+      "export_seconds": 4.6989117379999925,
+      "primary_inputs": 20,
+      "proof_size_bytes": 269793,
+      "prove_seconds": 7.3663094789999946,
+      "show_instance_seconds": 1.0797552829999972,
+      "total_sent_bytes": 286337,
+      "valid": true,
+      "variables": 65239,
+      "verify_seconds": 2.2416108669999915
+    }
+  ]
+}

@@ -1,9 +1,37 @@
 # Context-Blind BDAC Benchmark Artifact
 
-This directory provides a single entry point for building, testing, and
-benchmarking the context-blind device-bound anonymous credential prototype.
-It does not duplicate the implementation: by default it uses the adjacent
-`Implementation/` directory.
+This repository contains the context-blind device-bound anonymous credential
+prototype together with entry points for running the protocol and reproducing
+its benchmarks. The implementation is included under `implementation/`.
+
+## Running the protocol
+
+Build the native components once:
+
+```bash
+./run.sh smoke
+```
+
+Issue a credential:
+
+```bash
+./demo.sh issuance
+```
+
+Run enrollment, credential issuance, presentation, and verification:
+
+```bash
+./demo.sh presentation
+```
+
+The presentation command prints the disclosed attribute indexes, verification
+result, proof size, and timings for the complete flow. On Windows, the matching
+PowerShell commands delegate to WSL:
+
+```powershell
+.\demo.ps1 issuance
+.\demo.ps1 presentation
+```
 
 ## What the artifact measures
 
@@ -28,12 +56,12 @@ The current artifact targets Linux or WSL and expects:
 - a Sage-enabled Python environment containing the dependencies used by CAPSS;
 - CMake and a C++ compiler;
 - Rust and Cargo; and
-- the CAPSS/libiop dependencies already present under `Implementation/`.
+- the system libraries required by the included CAPSS/libiop sources.
 
-Run the artifact from the same Sage environment used for the implementation.
-The scripts fail early when Sage, Cargo, CMake, or the implementation tree is
-missing. Common Conda/Mamba installations containing an environment named
-`sage` are detected automatically. For another layout, set
+Run the artifact from a Sage-enabled environment. The scripts fail early when
+Sage, Cargo, CMake, or a required source tree is missing. Common Conda/Mamba
+installations containing an environment named `sage` are detected
+automatically. For another layout, set
 `BENCHMARK_PYTHON=/absolute/path/to/python`.
 
 ## One-command execution

@@ -1,0 +1,191 @@
+{
+  "capss_microbench": {
+    "iterations": 1,
+    "keygen_avg_seconds": 0.00629367099998035,
+    "label": "G256-5.fast.extended",
+    "sign_avg_seconds": 0.5835499879999588,
+    "verify_avg_seconds": 0.22320705000004182
+  },
+  "full_flow": {
+    "issuance_checks": {
+      "credential_signature_ok": true,
+      "disclosure_ok": true,
+      "issuance_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "issuance_message_sizes": {
+      "issuer_to_user_credential": 16160,
+      "issuer_to_user_request": 64,
+      "total": 19936,
+      "user_to_issuer": 3712
+    },
+    "issuance_summary": {
+      "Issuance total": {
+        "mean_seconds": 0.8550085320000562,
+        "stddev_seconds": 0.0
+      },
+      "Issuer selects issuance attributes": {
+        "mean_seconds": 4.278999995221966e-06,
+        "stddev_seconds": 0.0
+      },
+      "Issuer signs credential": {
+        "mean_seconds": 0.5260259400000677,
+        "stddev_seconds": 0.0
+      },
+      "Issuer verifies Merkle openings": {
+        "mean_seconds": 0.07871399299995119,
+        "stddev_seconds": 0.0
+      },
+      "Issuer verifies credential": {
+        "mean_seconds": 0.2369834419999961,
+        "stddev_seconds": 0.0
+      },
+      "User builds Merkle root || dpk": {
+        "mean_seconds": 0.013178350000089267,
+        "stddev_seconds": 0.0
+      },
+      "User opens issuance attrs": {
+        "mean_seconds": 0.00010252799995669193,
+        "stddev_seconds": 0.0
+      }
+    },
+    "show_d4": {
+      "aurora_total_seconds": 7.763123795999945,
+      "aurora_total_stddev_seconds": 0.0,
+      "constraints": 62888,
+      "disclosed_count": 4,
+      "export_seconds": 1.4062091060000057,
+      "export_stddev_seconds": 0.0,
+      "iterations": 1,
+      "primary_inputs": 11,
+      "proof_size_bytes": 327633.0,
+      "proof_size_max_bytes": 327633,
+      "proof_size_min_bytes": 327633,
+      "prove_seconds": 3.957605809000029,
+      "prove_stddev_seconds": 0.0,
+      "samples": [
+        {
+          "export_seconds": 1.4062091060000057,
+          "export_timings": {
+            "build_r1cs": 0.0005786909999869749,
+            "export_static_r1cs": 0.007672145000015007,
+            "export_variables": 0.23499820900008217,
+            "resolve_witness": 1.1628168510000023
+          },
+          "proof_size_bytes": 327633,
+          "prove_seconds": 3.957605809000029,
+          "total_sent_bytes": 344001,
+          "user_online_seconds": 5.994032326000024,
+          "valid": true,
+          "verify_seconds": 2.3771618440000566,
+          "witness_seconds": 0.6302174109999896
+        }
+      ],
+      "show_instance_seconds": 0.6302174109999896,
+      "show_instance_stddev_seconds": 0.0,
+      "static_export_seconds": 1.9945477090000168,
+      "total_sent_bytes": 344001.0,
+      "user_online_seconds": 5.994032326000024,
+      "user_online_stddev_seconds": 0.0,
+      "valid": true,
+      "variables": 64139,
+      "verify_seconds": 2.3771618440000566,
+      "verify_stddev_seconds": 0.0
+    },
+    "timings": [
+      {
+        "name": "Setup(lambda,l)",
+        "seconds": 6.895000069562229e-06,
+        "section": "setup"
+      },
+      {
+        "name": "Create entities / CAPSS keygen",
+        "seconds": 2.1573180750000347,
+        "section": "setup"
+      },
+      {
+        "name": "Governance attributes",
+        "seconds": 0.00011715599998751713,
+        "section": "enrollment"
+      },
+      {
+        "name": "Precompute Show R1CS template d=4",
+        "seconds": 5.341764469000054,
+        "section": "setup"
+      }
+    ],
+    "total_seconds": 29.866127517999985
+  },
+  "metadata": {
+    "attribute_count": 16,
+    "aurora_version": "v2",
+    "backend_revision": "aurora-v2-salted-prefix",
+    "capss_scheme": "G256-5.fast.extended",
+    "default_disclosure_count": 4,
+    "issuance_iterations": 1,
+    "scheme": "BDAC-CAPSS-Aurora",
+    "security_parameter": 128,
+    "seed": 20260721
+  },
+  "scaling": [
+    {
+      "aurora_total_seconds": 7.763123795999945,
+      "aurora_total_stddev_seconds": 0.0,
+      "constraints": 62888,
+      "disclosed_count": 4,
+      "export_seconds": 1.4062091060000057,
+      "export_stddev_seconds": 0.0,
+      "iterations": 1,
+      "primary_inputs": 11,
+      "proof_size_bytes": 327633.0,
+      "proof_size_max_bytes": 327633,
+      "proof_size_min_bytes": 327633,
+      "prove_seconds": 3.957605809000029,
+      "prove_stddev_seconds": 0.0,
+      "samples": [
+        {
+          "export_seconds": 1.4062091060000057,
+          "export_timings": {
+            "build_r1cs": 0.0005786909999869749,
+            "export_static_r1cs": 0.007672145000015007,
+            "export_variables": 0.23499820900008217,
+            "resolve_witness": 1.1628168510000023
+          },
+          "proof_size_bytes": 327633,
+          "prove_seconds": 3.957605809000029,
+          "total_sent_bytes": 344001,
+          "user_online_seconds": 5.994032326000024,
+          "valid": true,
+          "verify_seconds": 2.3771618440000566,
+          "witness_seconds": 0.6302174109999896
+        }
+      ],
+      "show_instance_seconds": 0.6302174109999896,
+      "show_instance_stddev_seconds": 0.0,
+      "static_export_seconds": 1.9945477090000168,
+      "total_sent_bytes": 344001.0,
+      "user_online_seconds": 5.994032326000024,
+      "user_online_stddev_seconds": 0.0,
+      "valid": true,
+      "variables": 64139,
+      "verify_seconds": 2.3771618440000566,
+      "verify_stddev_seconds": 0.0
+    }
+  ]
+}

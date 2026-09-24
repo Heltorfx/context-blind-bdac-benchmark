@@ -2,8 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd -- "$SCRIPT_DIR/.." && pwd)"
-IMPLEMENTATION_ROOT="${IMPLEMENTATION_ROOT:-$REPO_ROOT/Implementation}"
+IMPLEMENTATION_ROOT="${IMPLEMENTATION_ROOT:-$SCRIPT_DIR/implementation}"
 
 MODE="smoke"
 AURORA_VERSION="normal"
