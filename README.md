@@ -4,6 +4,17 @@ This repository contains the context-blind device-bound anonymous credential
 prototype together with entry points for running the protocol and reproducing
 its benchmarks. The implementation is included under `implementation/`.
 
+## Code provenance
+
+The prototype builds on the CAPSS implementation released with *CAPSS: A
+Framework for SNARK-Friendly Post-Quantum Signatures* by Feneuil and Rivain.
+In particular, the included CAPSS, SmallWood, and Aurora/libiop components are
+derived from that artifact. This repository adds the context-blind BDAC
+protocol layer, its augmented presentation relation, optimized backends,
+integration code, tests, executable demonstrations, and benchmark tooling.
+The original licenses and attribution files are retained in the corresponding
+source directories.
+
 ## Running the protocol
 
 Build the native components once:
