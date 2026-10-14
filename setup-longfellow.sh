@@ -5,9 +5,17 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 SOURCE_DIR="$SCRIPT_DIR/longfellow-zk"
 REVISION="35720f145b2128e0322d04561d4578d4d31e82a1"
 
-for tool in git cmake; do
+for tool in git cmake cargo; do
     command -v "$tool" >/dev/null 2>&1 || { echo "$tool is required" >&2; exit 2; }
 done
+
+IMPLEMENTATION_ROOT="$SCRIPT_DIR/implementation"
+cargo build --release --manifest-path "$IMPLEMENTATION_ROOT/rust-griffin/Cargo.toml"
+cp "$IMPLEMENTATION_ROOT/rust-griffin/target/release/librust_griffin.so" \
+   "$IMPLEMENTATION_ROOT/rust-griffin/rust_griffin.so"
+cargo build --release --manifest-path "$IMPLEMENTATION_ROOT/rust-wots/Cargo.toml"
+cp "$IMPLEMENTATION_ROOT/rust-wots/target/release/librust_wots.so" \
+   "$IMPLEMENTATION_ROOT/rust-wots/rust_wots.so"
 
 if [[ ! -e "$SOURCE_DIR" ]]; then
     git clone https://github.com/google/longfellow-zk.git "$SOURCE_DIR"

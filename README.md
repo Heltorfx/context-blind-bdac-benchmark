@@ -15,53 +15,56 @@ integration code, tests, executable demonstrations, and benchmark tooling.
 The original licenses and attribution files are retained in the corresponding
 source directories.
 
-## Running the protocol
+## Run a presentation with Longfellow
 
 Build the native components once:
+
+```bash
+bash ./setup-longfellow.sh
+```
+
+Run issuance alone, or the full enrollment, issuance, presentation, and
+verification flow:
+
+```bash
+./demo.sh issuance
+./demo.sh presentation longfellow
+```
+
+On Windows, run these commands from the repository directory:
+
+```powershell
+wsl bash ./setup-longfellow.sh
+.\demo.ps1 issuance
+.\demo.ps1 presentation longfellow
+```
+
+The demo executes all protocol roles locally. The presentation command prints
+the disclosed attribute indexes, verification result, proof size, and timings.
+The setup script builds the Rust components, checks out a pinned revision of
+Google's Longfellow source into the ignored `longfellow-zk/` directory, and
+builds the BDAC R1CS adapter from `longfellow/`. The Longfellow profile uses
+160 openings and a block encoding length of 15677. It targets 128-bit
+security, but this BN254-field parameter profile remains experimental; the
+source project's analysis for other fields does not directly validate it.
+
+## Aurora backend
+
+Build, test, and run one Aurora benchmark trial:
 
 ```bash
 ./run.sh smoke
 ```
 
-Issue a credential:
+Then run the same presentation relation with Aurora:
 
 ```bash
-./demo.sh issuance
+./demo.sh presentation aurora
 ```
 
-Run enrollment, credential issuance, presentation, and verification:
-
-```bash
-./demo.sh presentation
-```
-
-The presentation command prints the disclosed attribute indexes, verification
-result, proof size, and timings for the complete flow. On Windows, the matching
-PowerShell commands delegate to WSL:
-
-```powershell
-.\demo.ps1 issuance
-.\demo.ps1 presentation
-```
-
-The presentation can also use Longfellow's sumcheck/Ligero proof backend.
-Build it once after the normal smoke setup:
-
-```bash
-bash ./setup-longfellow.sh
-./demo.sh presentation longfellow
-```
-
-On Windows, run `wsl bash ./setup-longfellow.sh` from this directory, then
-`./demo.ps1 presentation longfellow`. The setup script checks out a pinned
-revision of Google's Longfellow source into the ignored `longfellow-zk/`
-directory and builds the BDAC R1CS adapter in `longfellow/`. It does not
-change the credential issuance or the presentation relation. The Longfellow
-profile uses 160 openings and a block encoding length of 15677, as in our
-local experiment. The implementation targets 128-bit security, but this
-particular BN254-field parameter profile should be treated as experimental;
-the source project's analysis for other fields does not directly validate it.
-The `paper` benchmark command below still measures Aurora only.
+On Windows, use `.\run.ps1 -Mode smoke` and
+`.\demo.ps1 presentation aurora`. Issuance and the presentation R1CS are
+shared between both backends; only proof generation and verification change.
 
 ## What the artifact measures
 
@@ -70,7 +73,8 @@ The benchmark records:
 - CAPSS key generation, signing, and verification;
 - complete credential issuance and communication;
 - Show-witness construction and R1CS export;
-- Aurora proving and verification;
+- Aurora proving and verification in `run.sh`, or Longfellow proving and
+  verification in the presentation demo;
 - proof and complete-presentation sizes; and
 - R1CS constraints, variables, and public inputs.
 
@@ -86,7 +90,9 @@ The current artifact targets Linux or WSL and expects:
 - a Sage-enabled Python environment containing the dependencies used by CAPSS;
 - CMake and a C++ compiler;
 - Rust and Cargo; and
-- the system libraries required by the included CAPSS/libiop sources.
+- Git for fetching the pinned Longfellow source; and
+- the system libraries required by CAPSS/libiop, including `libsodium-dev`
+  when building Aurora.
 
 Run the artifact from a Sage-enabled environment. The scripts fail early when
 Sage, Cargo, CMake, or a required source tree is missing. Common Conda/Mamba
@@ -94,7 +100,7 @@ installations containing an environment named `sage` are detected
 automatically. For another layout, set
 `BENCHMARK_PYTHON=/absolute/path/to/python`.
 
-## One-command execution
+## Aurora benchmark execution
 
 Quick validation:
 
@@ -136,10 +142,10 @@ Each execution creates a timestamped directory under `results/` containing:
 Sizes in the report are decimal kilobytes. The JSON files retain byte counts
 and unrounded timings.
 
-## Reproducing the paper values
+## Reproducing the Aurora measurements
 
-The default backend is the non-interactive Aurora implementation used by the
-paper. The command corresponding to the reported methodology is:
+The full `paper` benchmark currently measures the non-interactive Aurora
+backend only. Its command is:
 
 ```bash
 ./run.sh paper --aurora-version normal --threads 8
@@ -148,3 +154,5 @@ paper. The command corresponding to the reported methodology is:
 Machine-dependent timings should be compared only between runs performed on
 the same host and under the same power and thread settings. Proof sizes and
 circuit dimensions are machine independent.
+The Longfellow demo above runs one complete presentation; it is not the
+repeated-trial `paper` benchmark.
