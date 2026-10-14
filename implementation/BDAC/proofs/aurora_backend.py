@@ -7,7 +7,7 @@ from BDAC.proofs.show_backend import run_aurora_show, run_aurora_show_zk
 
 
 @dataclass(frozen=True)
-class AuroraResult:
+class ProofResult:
     raw: dict[str, Any]
 
     @property
@@ -17,6 +17,9 @@ class AuroraResult:
     @property
     def ok(self) -> bool:
         return self.verifier_result == "valid"
+
+
+AuroraResult = ProofResult
 
 
 class AuroraBackend:
@@ -30,6 +33,6 @@ class AuroraBackend:
         self.make_zk = make_zk
         self.version = version
 
-    def prove_show(self, instance) -> AuroraResult:
+    def prove_show(self, instance) -> ProofResult:
         raw = run_aurora_show_zk(instance, version=self.version) if self.make_zk else run_aurora_show(instance)
-        return AuroraResult(raw)
+        return ProofResult(raw)

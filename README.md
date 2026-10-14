@@ -44,6 +44,25 @@ PowerShell commands delegate to WSL:
 .\demo.ps1 presentation
 ```
 
+The presentation can also use Longfellow's sumcheck/Ligero proof backend.
+Build it once after the normal smoke setup:
+
+```bash
+bash ./setup-longfellow.sh
+./demo.sh presentation longfellow
+```
+
+On Windows, run `wsl bash ./setup-longfellow.sh` from this directory, then
+`./demo.ps1 presentation longfellow`. The setup script checks out a pinned
+revision of Google's Longfellow source into the ignored `longfellow-zk/`
+directory and builds the BDAC R1CS adapter in `longfellow/`. It does not
+change the credential issuance or the presentation relation. The Longfellow
+profile uses 160 openings and a block encoding length of 15677, as in our
+local experiment. The implementation targets 128-bit security, but this
+particular BN254-field parameter profile should be treated as experimental;
+the source project's analysis for other fields does not directly validate it.
+The `paper` benchmark command below still measures Aurora only.
+
 ## What the artifact measures
 
 The benchmark records:

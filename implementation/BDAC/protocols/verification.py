@@ -29,6 +29,10 @@ class VerificationTranscript:
     r1cs_seconds: float | None
     ok: bool
 
+    @property
+    def proof_result(self) -> dict[str, object]:
+        return self.aurora_result
+
 
 class Verification:
     def __init__(

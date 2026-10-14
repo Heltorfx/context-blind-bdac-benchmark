@@ -1,6 +1,8 @@
 param(
     [ValidateSet("issuance", "presentation")]
-    [string]$Command = "presentation"
+    [string]$Command = "presentation",
+    [ValidateSet("aurora", "longfellow")]
+    [string]$Backend = "aurora"
 )
 
 $ErrorActionPreference = "Stop"
@@ -11,7 +13,7 @@ if (-not $wslScriptDir) {
     throw "Unable to resolve the artifact directory in WSL."
 }
 
-wsl bash -lc "cd '$wslScriptDir' && ./demo.sh '$Command'"
+wsl bash -lc "cd '$wslScriptDir' && ./demo.sh '$Command' '$Backend'"
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }

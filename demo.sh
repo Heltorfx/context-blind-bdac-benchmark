@@ -4,11 +4,16 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 IMPLEMENTATION_ROOT="${IMPLEMENTATION_ROOT:-$SCRIPT_DIR/implementation}"
 COMMAND="${1:-presentation}"
+BACKEND="${2:-aurora}"
 AURORA_VERSION="${AURORA_VERSION:-normal}"
 THREADS="${DEMO_THREADS:-8}"
 
 if [[ "$COMMAND" != "issuance" && "$COMMAND" != "presentation" ]]; then
-    echo "Usage: ./demo.sh [issuance|presentation]" >&2
+    echo "Usage: ./demo.sh [issuance|presentation] [aurora|longfellow]" >&2
+    exit 2
+fi
+if [[ "$BACKEND" != "aurora" && "$BACKEND" != "longfellow" ]]; then
+    echo "Backend must be aurora or longfellow" >&2
     exit 2
 fi
 
@@ -53,6 +58,16 @@ cd "$IMPLEMENTATION_ROOT"
 
 if [[ "$COMMAND" == "issuance" ]]; then
     exec "${PYTHON[@]}" -u -m BDAC.demos.full_flow_demo --skip-presentation
+fi
+
+if [[ "$BACKEND" == "longfellow" ]]; then
+    BINARY="${LONGFELLOW_BINARY:-$SCRIPT_DIR/longfellow-zk/build-bdac/zk/bdac_r1cs_bench}"
+    if [[ ! -x "$BINARY" ]]; then
+        echo "Longfellow binary not found at $BINARY; run ./setup-longfellow.sh first." >&2
+        exit 2
+    fi
+    exec "${PYTHON[@]}" -u -m BDAC.demos.full_flow_demo \
+        --backend longfellow --longfellow-binary "$BINARY"
 fi
 
 exec "${PYTHON[@]}" -u -m BDAC.demos.full_flow_demo \

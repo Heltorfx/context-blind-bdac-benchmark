@@ -7,4 +7,6 @@ implementation/**/build/
 implementation/**/build-openmp/
 implementation/BDAC/output/
 implementation/BDAC/outputs/
+implementation/aurora_workspace/
 *.pyc
+longfellow-zk/

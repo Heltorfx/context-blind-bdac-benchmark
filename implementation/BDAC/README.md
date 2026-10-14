@@ -24,7 +24,7 @@ must not create attributes itself.
   - canonical encodings, native randomness helpers, the Griffin/Jive context
     commitment, and the current backend adapter boundary.
 - `proofs/`
-  - Show-proof and Aurora backend wrappers.
+  - Show R1CS construction and Aurora or Longfellow proof backend wrappers.
 - `protocols/`
   - enrollment, issuance, fused SE blind-signature, and presentation.
 - `demos/`
